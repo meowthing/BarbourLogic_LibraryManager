@@ -10,3 +10,4 @@
     - Search
     - Front-end
     - Messaging concerns(i.e. console writeline) all handled by the ConsoleDashboard - at the moment I've strewn writelines all over LibManager, implicitly tying it to Console only usage
+    - Fail-first checkpoints - allows easier error message handling (multiple reasons why an operation could fail - which is it?)

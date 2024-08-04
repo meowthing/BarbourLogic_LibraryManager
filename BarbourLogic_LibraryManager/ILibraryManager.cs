@@ -6,10 +6,20 @@ namespace BarbourLogic_LibraryManager
     {
         public void AddBook(Book book);
 
-        public void BorrowBook(User user, int bookId);
+        public void BorrowBook(int userId, int bookId);
 
-        public void ReturnBook(User user, int bookId);
+        public void ReturnBook(int userId, int bookId);
 
         public void GetBookList();
+
+        public void AddUser(string name);
+
+        public void EditUser(int id, string name);
+
+        public User GetUser(int id);
+
+        public void DeleteUser(int id);
+
+        public List<User> ListUsers();
     }
 }
