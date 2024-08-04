@@ -1,6 +1,7 @@
 ﻿using BarbourLogic_LibraryManager.Models;
 using System;
 using System.Collections.Generic;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace BarbourLogic_LibraryManager
         {
             while (true)
             {
+                Console.WriteLine("");
                 Console.WriteLine("Please select an option:");
                 Console.WriteLine("1. User management");
                 Console.WriteLine("2. Book management");
@@ -126,7 +128,14 @@ namespace BarbourLogic_LibraryManager
 
         private void BorrowBook()
         {
+            libraryManager.GetBookList();
+            Console.WriteLine("Input Book ID");
+            string bookId = Console.ReadLine();
 
+            // TODO: Check if book is available.    
+            Console.WriteLine("Input user ID");
+
+            libraryManager.BorrowBook(user, bookId);
         }
 
         private void ReturnBook()
@@ -134,6 +143,26 @@ namespace BarbourLogic_LibraryManager
 
         }
         private void ListBooks()
+        {
+            libraryManager.GetBookList();
+        }
+
+        private void AddUser()
+        {
+
+        }
+
+        private void EditUserDetails()
+        {
+
+        }
+
+        private void GetUserDetails()
+        {
+
+        }
+
+        private void DeleteUser()
         {
 
         }

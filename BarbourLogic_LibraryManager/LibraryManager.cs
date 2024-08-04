@@ -28,11 +28,12 @@ namespace BarbourLogic_LibraryManager
             }
         }
 
-        public void GetBookIds()
+        public void GetBookList()
         {
+            Console.WriteLine("Listing books:");
             foreach (Book book in Books)
             {
-                Console.WriteLine($"ID:{book.Id}, Title: {book.Title}, ISBN: {book.ISBN}, Available: {(book.Available ? "Yes" : "No")}");
+                Console.WriteLine($"ID:{book.Id}, Title: {book.Title}, Author: {book.Author}, ISBN: {book.ISBN}, Available: {(book.Available ? "Yes" : "No")}");
             }
         }
 

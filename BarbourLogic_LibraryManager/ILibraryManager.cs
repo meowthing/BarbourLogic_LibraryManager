@@ -9,5 +9,7 @@ namespace BarbourLogic_LibraryManager
         public void BorrowBook(User user, int bookId);
 
         public void ReturnBook(User user, int bookId);
+
+        public void GetBookList();
     }
 }
